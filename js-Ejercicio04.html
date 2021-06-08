@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evaluar cual es la edad mayor</title>
+    <style>
+        div {
+            background-color: rgb(174, 243, 174);
+            font-size: 20px;
+            font-family: sans-serif;
+            padding: 20px;
+            width: 500px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Evaluar cual es la edad mayor</h1>
+    <h2>Edades ingresadas por el usuario</h2>
+    <div id="datos"></div>
+    
+    <script>
+        function dameMayor (array) {
+            return Math.max.apply(null, array);
+        }
+
+        let usuarios = [];
+        for (let i = 0; i < 3; i++) {
+            let edad = +(prompt ('Ingrese edad del usuario numero: ' + (i+1)));
+            usuarios[i] = edad;
+        }
+                
+        let mayor = (dameMayor (usuarios));
+        
+        document.getElementById('datos').innerHTML = `Datos ingresados: <strong>${usuarios}</strong> la edad mayor es de: <strong>${mayor}</strong>`;
+        alert (`La edad mayor ingresada es: ${mayor}.`);
+    </script>
+</body>
+</html>
