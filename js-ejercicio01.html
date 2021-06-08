@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sumar 2 Numeros</title>
+  </head>
+  <body>
+    <h1>Sumar 2 numeros:</h1>
+
+    <h2 id="resultado">El resultado de la suma entre 40 + 16 es:</h2>
+
+    <button onclick="sumar()">Sumar ahora</button>
+
+    <script>
+      function sumar() {
+        let primero = 40;
+        let segundo = 16;
+        let sumaTotal = primero + segundo;
+
+        document.getElementById("resultado").innerHTML =
+          "El resultado de la suma entre " +
+          primero +
+          " + " +
+          segundo +
+          " es: <span style='background:red; color:white'>" +
+          sumaTotal +
+          "</span>";
+      }
+    </script>
+  </body>
+</html>

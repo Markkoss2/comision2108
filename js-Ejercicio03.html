@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usuario es mayor de edad</title>
+</head>
+<body>
+    <h1>Evaluar si usuario es mayor de edad</h1>
+    <div id="dato"></div>
+
+    <script>
+        function edad (dato) {
+            if (dato > 0 && dato < 120) {
+                resultado = dato >= 18 ? 'eres mayor' : 'eres menor';
+                document.getElementById('dato').innerHTML = `<h3>Tienes ${dato} años por tanto ${resultado}.</h3>`;
+                return resultado;
+            }
+            else {
+                return 'La edad no parece ser correcta.'
+            }
+            
+        }
+        alert (edad (Number(prompt ('Ingresa tu edad?'))));
+    </script>
+</body>
+</html>

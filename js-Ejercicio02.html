@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 02 - Promedio</title>
+    
+</head>
+<body>
+    <h1>Ejercicio 02 JavaScript</h1>
+    <h2>Calcular el promedio de 3 notas dadas</h2>
+    <div id="resultados"></div>
+
+    <script>
+        let nombre = prompt("Ingrese su nombre");
+               
+        let nota1 = Number(prompt ("Ingrese primer nota"));
+        let nota2 = Number(prompt ("Ingrese segunda nota"));
+        let nota3 = Number(prompt ("Ingrese tercera y ultima nota"));
+        let promedio = ((nota1 + nota2 + nota3) / 3).toFixed(2);
+        
+        alert (`Su promedio es: ${promedio}`);
+
+        document.getElementById("resultados").innerHTML = `Hola "${nombre}", tus notas fueron Nota 1: ${nota1} / Nota 2: ${nota2} / Nota 3: ${nota3} / Promedio: ${promedio}`;
+
+    </script>
+</body>
+</html>
